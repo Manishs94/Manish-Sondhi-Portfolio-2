@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { ArrowUpRight, LineChart, Users, Zap, Clock, Target, Users2 } from 'lucide-react';
+import { ArrowUpRight, LineChart, Users, Clock, Target, Users2 } from 'lucide-react';
 
 interface Metric {
   icon: JSX.Element;
@@ -32,10 +32,10 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    title: 'Bank of America Mobile Bill Payment Redesign',
+    title: 'Bank of America Mobile Bill Payment',
     subtitle: 'Enhancing Digital Banking Experience',
     description: 'Bank of America, serving over 68 million customers, introduced a new Bill Pay feature in 2022. This feature allows users to handle payments for utilities, cable, phone services, and more through electronic transactions, available as early as the next working day.',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000',
+    image: '/images/Bank Of America Bill Payment.png',
     metrics: [
       { icon: <Users2 className="w-5 h-5" />, value: '68M+', label: 'Active Users' },
       { icon: <LineChart className="w-5 h-5" />, value: '40%', label: 'Reduced Drop-offs' },
@@ -65,10 +65,10 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 2,
-    title: 'Cync Loan Origination System Redesign',
+    title: 'CYNC Loan Origination System',
     subtitle: 'Streamlining Commercial Lending',
     description: 'Redesigned the loan origination system for Cync, focusing on automating and simplifying the commercial lending process while ensuring regulatory compliance and improving user experience for both lenders and borrowers.',
-    image: 'https://images.unsplash.com/photo-1589666564459-93cdd3ab856a?auto=format&fit=crop&q=80&w=1000',
+    image: '/images/CYNC Dashboard Image.png',
     metrics: [
       { icon: <Users2 className="w-5 h-5" />, value: '45%', label: 'Faster Processing' },
       { icon: <LineChart className="w-5 h-5" />, value: '60%', label: 'Reduced Manual Work' },
@@ -100,7 +100,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 3,
-    title: 'Cross-Platform Banking Experience',
+    title: 'CYNC Advanced Analytics',
     subtitle: 'Accessible Banking Solutions',
     description: 'Creating a seamless banking experience across web and mobile platforms with accessibility in mind',
     image: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&q=80&w=1000',
