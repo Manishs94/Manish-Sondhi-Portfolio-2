@@ -8,6 +8,7 @@ import { Skills } from './components/Skills';
 import { Impact } from './components/Impact';
 import { Contact } from './components/Contact';
 import { BankOfAmericaCase } from './pages/BankOfAmericaCase';
+import { CYNCCase } from './pages/CYNCCase';
 import { HuluProject } from './pages/HuluProject';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             }
           />
           <Route path="/case-studies/bank-of-america" element={<BankOfAmericaCase />} />
+          <Route path="/case-studies/cync-loan-origination" element={<CYNCCase />} />
           <Route path="/design/hulu" element={<HuluProject />} />
         </Routes>
       </div>

@@ -65,28 +65,37 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 2,
-    title: 'CYNC Software Platform Optimization',
-    subtitle: 'Financial Software Enhancement',
-    description: 'Simplifying complex financial software through user-centered design and iterative improvements',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
+    title: 'Cync Loan Origination System Redesign',
+    subtitle: 'Streamlining Commercial Lending',
+    description: 'Redesigned the loan origination system for Cync, focusing on automating and simplifying the commercial lending process while ensuring regulatory compliance and improving user experience for both lenders and borrowers.',
+    image: 'https://images.unsplash.com/photo-1589666564459-93cdd3ab856a?auto=format&fit=crop&q=80&w=1000',
     metrics: [
-      { icon: <Users className="w-5 h-5" />, value: '20%', label: 'Engagement Increase' },
-      { icon: <Zap className="w-5 h-5" />, value: '30%', label: 'Improved Usability' }
+      { icon: <Users2 className="w-5 h-5" />, value: '45%', label: 'Faster Processing' },
+      { icon: <LineChart className="w-5 h-5" />, value: '60%', label: 'Reduced Manual Work' },
+      { icon: <Clock className="w-5 h-5" />, value: '35%', label: 'Time Savings' },
+      { icon: <Target className="w-5 h-5" />, value: '50%', label: 'Error Reduction' }
     ],
-    tools: ['Figma', 'Protopie', 'UserTesting'],
-    link: '#',
+    tools: ['Figma', 'Jira', 'Miro', 'Protopie', 'UserTesting'],
+    link: 'https://cync-loan-origination-e8jwns9.gamma.site/',
     overview: {
-      challenge: 'Complex financial software interface leading to user frustration',
-      solution: 'Simplified UI with improved navigation and workflow',
-      impact: 'Increased user engagement and satisfaction'
+      challenge: 'Complex loan origination process with multiple manual touchpoints, leading to delays, errors, and poor user experience for both lenders and borrowers.',
+      solution: 'Implemented a streamlined, automated workflow with intelligent document processing, real-time status tracking, and integrated compliance checks.',
+      impact: 'Significantly reduced loan processing time, improved accuracy, and enhanced user satisfaction for both internal teams and clients.'
     },
-    team: ['UX Designer', 'Developer'],
-    timeline: '2021 - 2022',
-    role: 'UX Designer',
+    team: [
+      'Product Designer (Lead)',
+      'Business Analysts (2)',
+      'Development Team (6)',
+      'QA Engineers (2)'
+    ],
+    timeline: '2023 - Present',
+    role: 'Lead UX/UI Designer',
     keyFeatures: [
-      'Simplified navigation',
-      'Improved workflows',
-      'Enhanced UI'
+      'Automated document processing',
+      'Real-time application tracking',
+      'Integrated compliance checks',
+      'Smart workflow automation',
+      'Digital signature integration'
     ]
   },
   {
@@ -123,6 +132,8 @@ export function CaseStudies() {
   const handleViewCaseStudy = (study: CaseStudy) => {
     if (study.id === 1) {
       navigate('/case-studies/bank-of-america');
+    } else if (study.id === 2) {
+      navigate('/case-studies/cync-loan-origination');
     }
   };
 
