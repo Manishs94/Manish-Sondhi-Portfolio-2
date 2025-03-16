@@ -11,6 +11,9 @@ import { BankOfAmericaCase } from './pages/BankOfAmericaCase';
 import { CYNCCase } from './pages/CYNCCase';
 import { HuluProject } from './pages/HuluProject';
 import { SplitLandingPage } from './pages/SplitLandingPage';
+import { ExpandingCardsPage } from './pages/ExpandingCardsPage';
+import { RotatingNavPage } from './pages/RotatingNavPage';
+import { ProgressStepsPage } from './pages/ProgressStepsPage';
 
 function App() {
   return (
@@ -36,6 +39,9 @@ function App() {
           <Route path="/case-studies/cync-loan-origination" element={<CYNCCase />} />
           <Route path="/design/hulu" element={<HuluProject />} />
           <Route path="/design/split" element={<SplitLandingPage />} />
+          <Route path="/design/expanding-cards" element={<ExpandingCardsPage />} />
+          <Route path="/design/rotating-nav" element={<RotatingNavPage />} />
+          <Route path="/design/progress-steps" element={<ProgressStepsPage />} />
         </Routes>
       </div>
     </Router>

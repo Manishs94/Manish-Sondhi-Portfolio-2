@@ -14,7 +14,7 @@ interface DesignProject {
 const designProjects: DesignProject[] = [
   {
     id: 1,
-    title: 'Hulu Redesign Project',
+    title: 'Hulu Redesign',
     description: 'A modern, responsive redesign of the Hulu streaming platform interface',
     image: '/images/Hulu-Design.png',
     category: 'UI/UX Design',
@@ -29,6 +29,33 @@ const designProjects: DesignProject[] = [
     category: 'Web Design',
     tools: ['HTML', 'CSS', 'JavaScript'],
     link: '/design/split'
+  },
+  {
+    id: 3,
+    title: 'Expanding Cards Gallery',
+    description: 'An interactive image gallery with smooth expanding animations and responsive design.',
+    image: '/images/expanding-cards.jpg', // Add this image to your public/images folder
+    category: 'Interactive Design',
+    tools: ['HTML', 'CSS', 'JavaScript', 'Animations'],
+    link: '/design/expanding-cards'
+  },
+  {
+    id: 4,
+    title: 'Rotating Navigation',
+    description: 'An innovative navigation interface featuring smooth rotating animations and unique user interactions.',
+    image: '/images/rotating-nav-animation.jpg',
+    category: 'Interactive Design',
+    tools: ['HTML', 'CSS', 'JavaScript', 'Animations'],
+    link: '/design/rotating-nav'
+  },
+  {
+    id: 5,
+    title: 'Progress Steps',
+    description: 'An intuitive progress indicator with interactive step navigation and smooth transitions.',
+    image: '/images/3D-Boxes-background.jpg',
+    category: 'Interactive Design',
+    tools: ['HTML', 'CSS', 'JavaScript', 'Animations'],
+    link: '/design/progress-steps'
   }
   // Add more design projects here if needed
 ];
@@ -41,6 +68,12 @@ export function DesignWork() {
       navigate('/design/hulu');
     } else if (project.id === 2) {
       navigate('/design/split');
+    } else if (project.id === 3) {
+      navigate('/design/expanding-cards');
+    } else if (project.id === 4) {
+      navigate('/design/rotating-nav');
+    } else if (project.id === 5) {
+      navigate('/design/progress-steps');
     }
   };
 
