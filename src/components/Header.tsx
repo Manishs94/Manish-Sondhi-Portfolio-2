@@ -19,15 +19,15 @@ export function Header() {
             <a href="#skills" className="text-gray-600 hover:text-gray-900 transition-colors">Skills</a>
             <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
             <div className="flex items-center space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+              <a href="https://github.com/Manishs94" target="_blank" rel="noopener noreferrer" 
                  className="text-gray-600 hover:text-gray-900 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/manish-sondhi-2b3bb2217/" target="_blank" rel="noopener noreferrer"
                  className="text-gray-600 hover:text-gray-900 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="mailto:your.email@example.com"
+              <a href="Manishsondhi94@gmail.com"
                  className="text-gray-600 hover:text-gray-900 transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
@@ -52,13 +52,13 @@ export function Header() {
               <a href="#skills" className="text-gray-600 hover:text-gray-900 transition-colors">Skills</a>
               <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
               <div className="flex items-center space-x-4 pt-2">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Manishs94" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/manish-sondhi-2b3bb2217/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="mailto:your.email@example.com">
+                <a href="Manishsondhi94@gmail.com">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>

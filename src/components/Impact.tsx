@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     quote: "A rare combination of design excellence and business acumen. Their work consistently exceeds expectations.",
-    author: "Michael Chen",
+    author: "Brant Nesbitt",
     role: "Director of UX, CYNC Software"
   }
 ];

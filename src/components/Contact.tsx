@@ -22,7 +22,7 @@ export function Contact() {
 
             <div className="flex items-center gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/manish-sondhi-2b3bb2217/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white text-gray-600 hover:text-gray-900 rounded-full transition-colors"
@@ -30,7 +30,7 @@ export function Contact() {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Manishs94"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white text-gray-600 hover:text-gray-900 rounded-full transition-colors"

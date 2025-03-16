@@ -21,17 +21,26 @@ const designProjects: DesignProject[] = [
     tools: ['React', 'Tailwind CSS', 'Responsive Design'],
     link: '/design/hulu'
   },
-  // Add more design projects here
+  {
+    id: 2,
+    title: 'Split Landing Page',
+    description: 'A modern split-screen landing page featuring bold visuals and clear calls-to-action.',
+    image: '/images/Split-Landing-Page.jpg', // Ensure this image exists in your images folder
+    category: 'Web Design',
+    tools: ['HTML', 'CSS', 'JavaScript'],
+    link: '/design/split'
+  }
+  // Add more design projects here if needed
 ];
 
 export function DesignWork() {
   const navigate = useNavigate();
 
   const handleViewProject = (project: DesignProject) => {
-    if (project.link === '/design/hulu') {
-      navigate(project.link);
-    } else {
-      window.open(project.link, '_blank');
+    if (project.id === 1) {
+      navigate('/design/hulu');
+    } else if (project.id === 2) {
+      navigate('/design/split');
     }
   };
 
@@ -50,14 +59,11 @@ export function DesignWork() {
                 />
               </div>
               <div className="p-6">
-                <div className="mb-2 text-sm font-medium text-blue-600">
-                  {project.category}
-                </div>
+                <div className="mb-2 text-sm font-medium text-blue-600">{project.category}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
-                
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tools.map((tool, index) => (
                     <span
@@ -68,7 +74,6 @@ export function DesignWork() {
                     </span>
                   ))}
                 </div>
-
                 <button
                   onClick={() => handleViewProject(project)}
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"

@@ -10,6 +10,7 @@ import { Contact } from './components/Contact';
 import { BankOfAmericaCase } from './pages/BankOfAmericaCase';
 import { CYNCCase } from './pages/CYNCCase';
 import { HuluProject } from './pages/HuluProject';
+import { SplitLandingPage } from './pages/SplitLandingPage';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/case-studies/bank-of-america" element={<BankOfAmericaCase />} />
           <Route path="/case-studies/cync-loan-origination" element={<CYNCCase />} />
           <Route path="/design/hulu" element={<HuluProject />} />
+          <Route path="/design/split" element={<SplitLandingPage />} />
         </Routes>
       </div>
     </Router>
