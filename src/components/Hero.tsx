@@ -1,4 +1,4 @@
-import { ArrowRight, TrendingUp, Clock, Users } from 'lucide-react';
+import { ArrowRight, Lightbulb, Target, Palette } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -11,30 +11,32 @@ export function Hero() {
           <p className="text-xl md:text-2xl text-gray-600 mb-12">
             Transforming complex challenges into intuitive digital experiences that drive business growth and user satisfaction
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-xl shadow-sm">
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center justify-center mb-3">
-                <TrendingUp className="w-8 h-8 text-emerald-500" />
+                <Lightbulb className="w-8 h-8 text-amber-500" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">15%</h3>
-              <p className="text-gray-600">Increase in User Satisfaction</p>
+                <h3 className="text-2xl font-bold text-gray-900">40+</h3>
+                <p className="text-gray-600">Design Solutions Delivered</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="flex items-center justify-center mb-3">
-                <Clock className="w-8 h-8 text-blue-500" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">25%</h3>
-              <p className="text-gray-600">Faster Onboarding Time</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="flex items-center justify-center mb-3">
-                <Users className="w-8 h-8 text-purple-500" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">20%</h3>
-              <p className="text-gray-600">Increase in Engagement</p>
-            </div>
-          </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center justify-center mb-3">
+                    <Target className="w-8 h-8 text-red-500" />
+                  </div>
+                    <h3 className="text-2xl font-bold text-gray-900">98%</h3>
+                    <p className="text-gray-600">User Testing Success Rate</p>
+                </div>
+                    
+                    <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex items-center justify-center mb-3">
+                        <Palette className="w-8 h-8 text-indigo-500" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900">120+</h3>
+                        <p className="text-gray-600">UI Components Created</p>
+                      </div>
+                    </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
