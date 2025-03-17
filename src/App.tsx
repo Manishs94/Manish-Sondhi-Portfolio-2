@@ -15,6 +15,7 @@ import { SplitLandingPage } from './pages/SplitLandingPage';
 import { ExpandingCardsPage } from './pages/ExpandingCardsPage';
 import { RotatingNavPage } from './pages/RotatingNavPage';
 import { ProgressStepsPage } from './pages/ProgressStepsPage';
+import { AnimationsProject } from './pages/AnimationsProject';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/design/expanding-cards" element={<ExpandingCardsPage />} />
           <Route path="/design/rotating-nav" element={<RotatingNavPage />} />
           <Route path="/design/progress-steps" element={<ProgressStepsPage />} />
+          <Route path="/animations" element={<AnimationsProject />} />
         </Routes>
       </div>
     </Router>

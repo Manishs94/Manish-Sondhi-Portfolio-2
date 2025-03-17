@@ -1,4 +1,5 @@
 import { ArrowUpRight, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export interface DevelopmentProject {
   id: number;
@@ -8,19 +9,29 @@ export interface DevelopmentProject {
   githubLink: string;
   demoLink: string;
   features: string[];
+  isInternalRoute?: boolean;
+  routePath?: string;
+  image: string; // Add this line
 }
 
 const developmentProjects: DevelopmentProject[] = [
   {
     id: 1,
-    title: 'React Component Library',
-    description: 'A collection of reusable React components built with TypeScript and Tailwind CSS',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Storybook'],
-    githubLink: '#',
-    demoLink: '#',
-    features: ['Fully typed components', 'Responsive design', 'Accessibility compliant']
-  },
-  // Add more development projects here
+    title: 'CSS Animations Gallery',
+    description: 'An interactive gallery showcasing various CSS animations and transitions',
+    technologies: ['React', 'CSS', 'Framer Motion', 'TypeScript'],
+    githubLink: 'https://github.com/yourusername/animations-project',
+    demoLink: 'https://animations-a7d93.web.app/',
+    features: [
+      'Interactive animation examples',
+      'Custom CSS transitions',
+      'Responsive design',
+      'Performance optimized'
+    ],
+    isInternalRoute: true,
+    routePath: '/animations',
+    image: '/images/animations-preview.jpg' // Add your image path
+  }
 ];
 
 export function DevelopmentProject() {
@@ -54,18 +65,32 @@ export function DevelopmentProject() {
               <div className="flex gap-4">
                 <a
                   href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-gray-700 hover:text-gray-900 transition-colors"
                 >
                   <Github className="w-4 h-4 mr-1" />
                   Code
                 </a>
-                <a
-                  href={project.demoLink}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
-                >
-                  Live Demo
-                  <ArrowUpRight className="w-4 h-4 ml-1" />
-                </a>
+                {project.isInternalRoute ? (
+                  <Link
+                    to={project.routePath!}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    View Project
+                    <ArrowUpRight className="w-4 h-4 ml-1" />
+                  </Link>
+                ) : (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    Live Demo
+                    <ArrowUpRight className="w-4 h-4 ml-1" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
