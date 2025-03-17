@@ -2,8 +2,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { CaseStudies } from './components/CaseStudies';
-import { DesignWork } from './components/DesignWork';
-import { DevelopmentWork } from './components/DevelopmentWork';
+import { About } from './components/About';
+import { DesignProject } from './components/DesignProject';
+import { DevelopmentProject } from './components/DevelopmentProject';
 import { Skills } from './components/Skills';
 import { Impact } from './components/Impact';
 import { Contact } from './components/Contact';
@@ -27,8 +28,9 @@ function App() {
                 <Header />
                 <Hero />
                 <CaseStudies />
-                <DesignWork />
-                <DevelopmentWork />
+                <DesignProject />
+                <DevelopmentProject />
+                <About />      {/* Add this line */}
                 <Skills />
                 <Impact />
                 <Contact />

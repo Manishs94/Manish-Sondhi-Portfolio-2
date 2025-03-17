@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-interface DesignProject {
+export interface DesignProject {
   id: number;
   title: string;
   description: string;
@@ -60,7 +60,7 @@ const designProjects: DesignProject[] = [
   // Add more design projects here if needed
 ];
 
-export function DesignWork() {
+export function DesignProject() {
   const navigate = useNavigate();
 
   const handleViewProject = (project: DesignProject) => {

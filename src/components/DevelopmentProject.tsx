@@ -1,6 +1,6 @@
 import { ArrowUpRight, Github } from 'lucide-react';
 
-interface DevelopmentProject {
+export interface DevelopmentProject {
   id: number;
   title: string;
   description: string;
@@ -23,7 +23,7 @@ const developmentProjects: DevelopmentProject[] = [
   // Add more development projects here
 ];
 
-export function DevelopmentWork() {
+export function DevelopmentProject() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">

@@ -14,7 +14,7 @@ export function Header() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#work" className="text-gray-600 hover:text-gray-900 transition-colors">Work</a>
+            <a href="#case-studies" className="text-gray-600 hover:text-gray-900 transition-colors">Work</a>
             <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
             <a href="#skills" className="text-gray-600 hover:text-gray-900 transition-colors">Skills</a>
             <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
