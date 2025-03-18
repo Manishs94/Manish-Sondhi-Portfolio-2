@@ -12,7 +12,7 @@ export function Contact() {
 
           <div className="flex flex-col items-center space-y-6">
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:ManishSondhi94@gamil.com"
               className="w-full sm:w-auto px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
             >
               <Mail className="w-5 h-5" />
@@ -45,7 +45,9 @@ export function Contact() {
                 Get a detailed overview of my experience and capabilities
               </p>
               <a
-                href="#"
+                href="https://drive.google.com/file/d/1jNMvIZVg48tnfcwFXqeh7heHVNfXpdu1/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full px-6 py-3 border-2 border-gray-900 text-gray-900 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
               >
                 Download CV

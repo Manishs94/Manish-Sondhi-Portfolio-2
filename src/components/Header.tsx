@@ -27,7 +27,7 @@ export function Header() {
                  className="text-gray-600 hover:text-gray-900 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="Manishsondhi94@gmail.com"
+              <a href="mailto:Manishsondhi94@gmail.com"
                  className="text-gray-600 hover:text-gray-900 transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
@@ -47,7 +47,7 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t">
             <div className="flex flex-col space-y-4 px-6 py-4">
-              <a href="#work" className="text-gray-600 hover:text-gray-900 transition-colors">Work</a>
+              <a href="#case-studies" className="text-gray-600 hover:text-gray-900 transition-colors">Work</a>
               <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
               <a href="#skills" className="text-gray-600 hover:text-gray-900 transition-colors">Skills</a>
               <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
