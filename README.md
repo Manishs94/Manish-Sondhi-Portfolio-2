@@ -58,7 +58,7 @@ The portfolio is deployed on Firebase Hosting. To deploy:
 
 ```bash
 npm run build
-firebase deploy
+netlify deploy
 ```
 
 ## 📱 Live Projects
