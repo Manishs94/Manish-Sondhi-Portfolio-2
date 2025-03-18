@@ -58,7 +58,7 @@ export function Header() {
                 <a href="https://www.linkedin.com/in/manish-sondhi-2b3bb2217/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="Manishsondhi94@gmail.com">
+                <a href="mailto:Manishsondhi94@gmail.com">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
