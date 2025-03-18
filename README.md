@@ -1,5 +1,3 @@
-# Manish-Sondhi-Portfolio-2
-
 # Manish Sondhi Portfolio
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS showcasing my development projects and design work.
