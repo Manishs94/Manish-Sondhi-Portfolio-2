@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { ArrowUpRight, LineChart, Users, Clock, Target, Users2 } from 'lucide-react';
+import { ArrowUpRight, LineChart, Clock, Target, Users2 } from 'lucide-react';
 
 interface Metric {
   icon: JSX.Element;
