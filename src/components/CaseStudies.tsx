@@ -42,7 +42,7 @@ const caseStudies: CaseStudy[] = [
       { icon: <Clock className="w-5 h-5" />, value: '25%', label: 'Process Improvement' },
       { icon: <Target className="w-5 h-5" />, value: '35%', label: 'User Satisfaction' }
     ],
-    tools: ['Figma', 'Adobe XD', 'Analytics', 'User Testing', 'Protopie'],
+    tools: ['Figma', 'Analytics', 'User Testing', 'Protopie'],
     link: 'https://boa-billpay-redesign-fewkgfd.gamma.site/',
     overview: {
       challenge: 'Users expressed dissatisfaction with the Bill Pay feature, facing complexities in payment scheduling, limited flexibility, and confusion in tracking payment history.',
@@ -75,7 +75,7 @@ const caseStudies: CaseStudy[] = [
       { icon: <Clock className="w-5 h-5" />, value: '35%', label: 'Time Savings' },
       { icon: <Target className="w-5 h-5" />, value: '50%', label: 'Error Reduction' }
     ],
-    tools: ['Figma', 'Jira', 'Miro', 'Protopie', 'UserTesting'],
+    tools: ['Adobe XD', 'Jira', 'Miro', 'Protopie', 'UserTesting', 'Confluence'],
     link: 'https://cync-loan-origination-e8jwns9.gamma.site/',
     overview: {
       challenge: 'Complex loan origination process with multiple manual touchpoints, leading to delays, errors, and poor user experience for both lenders and borrowers.',
@@ -110,7 +110,7 @@ const caseStudies: CaseStudy[] = [
       { icon: <Clock className="w-5 h-5" />, value: '30%', label: 'Time Savings' },
       { icon: <Target className="w-5 h-5" />, value: '40%', label: 'Accuracy Improvement' }
     ],
-    tools: ['Figma', 'Miro', 'WCAG 2.1', 'Protopie'],
+    tools: ['Adobe XD', 'Miro', 'WCAG 2.1', 'Protopie', 'Confluence'],
     link: 'https://uiux-case-study-enhancin-zkm1u63.gamma.site/',
     overview: {
       challenge: 'Inconsistent experience across platforms and poor accessibility compliance',
