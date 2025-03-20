@@ -10,6 +10,7 @@ import { Impact } from './components/Impact';
 import { Contact } from './components/Contact';
 import { BankOfAmericaCase } from './pages/BankOfAmericaCase';
 import { CYNCCase } from './pages/CYNCCase';
+import { CyncAdvancedAnalyticsCase } from './pages/CyncAdvancedAnalyticsCase';
 import { HuluProject } from './pages/HuluProject';
 import { SplitLandingPage } from './pages/SplitLandingPage';
 import { ExpandingCardsPage } from './pages/ExpandingCardsPage';
@@ -45,6 +46,7 @@ function App() {
           />
           <Route path="/case-studies/bank-of-america" element={<BankOfAmericaCase />} />
           <Route path="/case-studies/cync-loan-origination" element={<CYNCCase />} />
+          <Route path="/case-studies/cync-advanced-analytics" element={<CyncAdvancedAnalyticsCase/>} />
           <Route path="/design/hulu" element={<HuluProject />} />
           <Route path="/design/split" element={<SplitLandingPage />} />
           <Route path="/design/expanding-cards" element={<ExpandingCardsPage />} />

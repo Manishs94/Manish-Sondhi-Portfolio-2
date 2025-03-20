@@ -105,23 +105,26 @@ const caseStudies: CaseStudy[] = [
     description: 'Creating a seamless banking experience across web and mobile platforms with accessibility in mind',
     image: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&q=80&w=1000',
     metrics: [
-      { icon: <Users className="w-5 h-5" />, value: '35%', label: 'User Satisfaction' },
-      { icon: <LineChart className="w-5 h-5" />, value: '45%', label: 'Task Completion' }
+      { icon: <Users2 className="w-5 h-5" />, value: '35%', label: 'User Satisfaction' },
+      { icon: <LineChart className="w-5 h-5" />, value: '45%', label: 'Task Completion' },
+      { icon: <Clock className="w-5 h-5" />, value: '30%', label: 'Time Savings' },
+      { icon: <Target className="w-5 h-5" />, value: '40%', label: 'Accuracy Improvement' }
     ],
-    tools: ['Sketch', 'InVision', 'WCAG 2.1'],
-    link: '#',
+    tools: ['Figma', 'Miro', 'WCAG 2.1', 'Protopie'],
+    link: 'https://uiux-case-study-enhancin-zkm1u63.gamma.site/',
     overview: {
-      challenge: 'Inconsistent experience across platforms',
-      solution: 'Unified design system with accessibility focus',
-      impact: 'Improved user satisfaction and accessibility compliance'
+      challenge: 'Inconsistent experience across platforms and poor accessibility compliance',
+      solution: 'Unified design system with strong accessibility focus and improved analytics',
+      impact: 'Improved user satisfaction and full WCAG 2.1 compliance'
     },
-    team: ['Lead Designer', 'Accessibility Expert'],
-    timeline: '2021',
+    team: ['Lead Designer', 'Accessibility Expert', 'Analytics Team (2)'],
+    timeline: '2021 - 2022',
     role: 'Lead Designer',
     keyFeatures: [
       'Cross-platform consistency',
       'WCAG 2.1 compliance',
-      'Unified design system'
+      'Unified design system',
+      'Advanced analytics dashboard'
     ]
   }
 ];
@@ -134,6 +137,8 @@ export function CaseStudies() {
       navigate('/case-studies/bank-of-america');
     } else if (study.id === 2) {
       navigate('/case-studies/cync-loan-origination');
+    } else if (study.id === 3) {
+      navigate('/case-studies/cync-advanced-analytics');
     }
   };
 
