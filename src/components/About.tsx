@@ -3,46 +3,12 @@ import { ExternalLink } from 'lucide-react';
 export function About() {
   const certifications = [
     {
-      title: "Build Dynamic User Interfaces (UI) for Websites",
+      title: "Google UX Design Professional Certificate",
       issuer: "Google",
-      credentialId: "EFM10I04ZF5C",
-      description: "Certified in building dynamic and responsive user interfaces for websites",
-      verifyLink: "https://www.coursera.org/account/accomplishments/verify/EFM10I04ZF5C?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
-    },
-    {
-      title: "Build Wireframes and Low-Fidelity Prototypes",
-      issuer: "Google",
-      credentialId: "B029MRSE563C",
-      description: "Certified in creating effective wireframes and low-fidelity prototypes",
-      verifyLink: "https://www.coursera.org/account/accomplishments/verify/B029MRSE563C"
-    },
-    {
-      title: "Conduct UX Research and Test Early Concepts",
-      issuer: "Google",
-      credentialId: "ZW3Z06WLTYRI",
-      description: "Certified in UX research methodologies and early concept testing",
-      verifyLink: "https://www.coursera.org/account/accomplishments/verify/ZW3Z06WLTYRI"
-    },
-    {
-      title: "Create High-Fidelity Designs and Prototypes in Figma",
-      issuer: "Google",
-      credentialId: "579DDV46FZSQ",
-      description: "Certified in creating detailed designs and interactive prototypes using Figma",
-      verifyLink: "https://www.coursera.org/account/accomplishments/verify/579DDV46FZSQ"
-    },
-    {
-      title: "Foundations of User Experience (UX) Design",
-      issuer: "Google",
-      credentialId: "QCNEJE9DC9NE",
-      description: "Certified in fundamental principles of UX design",
-      verifyLink: "https://www.coursera.org/account/accomplishments/verify/QCNEJE9DC9NE"
-    },
-    {
-      title: "Start the UX Design Process: Empathize, Define, and Ideate",
-      issuer: "Google",
-      credentialId: "HJ4O7LZ3HCRN",
-      description: "Certified in core UX design process phases",
-      verifyLink: "https://www.coursera.org/account/accomplishments/verify/HJ4O7LZ3HCRN"
+      credentialId: "YFMCQB9B53QO",
+      description: "Comprehensive certification in UX design principles, research methods, and design tools",
+      verifyLink: "https://www.coursera.org/account/accomplishments/specialization/YFMCQB9B53QO",
+      image: "/images/google-ux-certificate.png"
     }
   ];
 
@@ -76,13 +42,14 @@ export function About() {
           {/* Certifications */}
           <div className="bg-gray-50 p-8 rounded-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Certifications</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               {certifications.map((cert, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <h4 className="font-semibold text-gray-900 mb-2">{cert.title}</h4>
                       <p className="text-blue-600 mb-2 text-sm">{cert.issuer}</p>
+                      <p className="text-gray-600 mb-2">{cert.description}</p>
                       <div className="flex items-center space-x-2 text-sm mb-2">
                         <span className="text-gray-500">Credential ID:</span>
                         <span className="font-mono text-gray-700">{cert.credentialId}</span>
@@ -93,15 +60,15 @@ export function About() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-sm text-blue-600 hover:text-blue-800"
                       >
-                        Veiw Certificate
+                        View Certificate
                         <ExternalLink className="w-4 h-4 ml-1" />
                       </a>
                     </div>
-                    {/* <img 
-                      src="/images/google-logo.png" 
-                      alt="Google" 
-                      className="w-8 h-8 object-contain ml-4"
-                    /> */}
+                    <img 
+                      src={cert.image}
+                      alt={`${cert.title} Certificate`}
+                      className="w-32 h-32 object-contain ml-4 rounded-lg shadow-sm"
+                    />
                   </div>
                 </div>
               ))}
