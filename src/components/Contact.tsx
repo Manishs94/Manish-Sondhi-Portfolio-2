@@ -45,7 +45,7 @@ export function Contact() {
                 Get a detailed overview of my experience and capabilities
               </p>
               <a
-                href="https://drive.google.com/file/d/1f3OGLuVOEfvChp8s0fX9hyZVBWj12FLM/view?usp=sharing"
+                href="https://drive.google.com/file/d/1mh8jWf6acspgD7GOF8PW2OixRcL59zD5/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full px-6 py-3 border-2 border-gray-900 text-gray-900 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
