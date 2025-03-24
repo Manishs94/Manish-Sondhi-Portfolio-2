@@ -19,8 +19,8 @@ export function About() {
           <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">About Me</h2>
           
           {/* Introduction */}
-          <div className="container mx-auto px-6">
-            <p className="text-lg text-gray-700">
+          <div className="container mx-auto px-4 sm:px-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Senior UI/UX Designer with 7+ years of experience creating user-centered designs 
               that drive engagement and enhance usability. Specialized in translating complex 
               requirements into intuitive digital experiences across web and mobile platforms.
@@ -28,9 +28,9 @@ export function About() {
           </div>
 
           {/* Education */}
-          <div className="bg-gray-50 p-8 rounded-xl">
+          <div className="bg-gray-50 p-4 sm:p-8 rounded-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Education</h3>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
               <h4 className="font-semibold text-gray-900">Southern New Hampshire University</h4>
               <p className="text-gray-600">Bachelor's Degree in Information Technology</p>
               <p className="text-gray-500 mt-2 text-sm italic">
@@ -40,13 +40,13 @@ export function About() {
           </div>
 
           {/* Certifications */}
-          <div className="bg-gray-50 p-8 rounded-xl">
+          <div className="bg-gray-50 p-4 sm:p-8 rounded-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Certifications</h3>
             <div className="grid grid-cols-1 gap-6">
               {certifications.map((cert, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
+                <div key={index} className="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex flex-col sm:flex-row sm:items-start">
+                    <div className="flex-1 mb-4 sm:mb-0">
                       <h4 className="font-semibold text-gray-900 mb-2">{cert.title}</h4>
                       <p className="text-blue-600 mb-2 text-sm">{cert.issuer}</p>
                       <p className="text-gray-600 mb-2">{cert.description}</p>
@@ -67,7 +67,7 @@ export function About() {
                     <img 
                       src={cert.image}
                       alt={`${cert.title} Certificate`}
-                      className="w-32 h-32 object-contain ml-4 rounded-lg shadow-sm"
+                      className="w-full sm:w-32 h-32 object-contain sm:ml-4 rounded-lg shadow-sm"
                     />
                   </div>
                 </div>
@@ -83,7 +83,7 @@ export function About() {
               <div className="bg-white p-8 rounded-lg shadow-sm">
                 <div className="flex items-center justify-between mb-2">
                   <h4 className="text-xl font-semibold text-gray-900">🧩 Senior Product & UI/UX Designer</h4>
-                  <span className="text-gray-500 text-sm px-3 py-1 bg-gray-100 rounded-full">Tampa,FL</span>
+                  <span className="text-gray-500 text-sm px-3 py-1 bg-gray-100 rounded-full">Tampa, FL</span>
                 </div>
                 <p className="text-blue-600 mb-6">CYNC Software · Feb 2022 – Present</p>
                 
@@ -189,6 +189,59 @@ export function About() {
                     <h5 className="font-medium text-gray-900 mb-3">🛠 Tools & Stack:</h5>
                     <div className="flex flex-wrap gap-2">
                       {['Figma', 'Adobe XD', 'InVision', 'Sketch', 'Angular', 'TypeScript', 'Jira', 'Confluence', 'Google Analytics', 'Heatmaps', 'WCAG', 'User Research'].map((tool) => (
+                        <span key={tool} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Innovative Design Studio Role */}
+              <div className="bg-white p-8 rounded-lg shadow-sm">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="text-xl font-semibold text-gray-900">🎨 Junior UI/UX Designer</h4>
+                  <span className="text-gray-500 text-sm px-3 py-1 bg-gray-100 rounded-full">Freelance</span>
+                </div>
+                <p className="text-blue-600 mb-6">Innovative Design Studio · Jan 2018 – Nov 2018</p>
+
+                <p className="text-gray-700 mb-8 leading-relaxed">
+                  I worked on multiple early-stage projects, contributing to research, UX flows, and UI visuals under the guidance of senior designers. 
+                  This role gave me foundational hands-on experience in applying human-centered design principles to real client problems.
+                </p>
+
+                <div className="space-y-6">
+                  <div>
+                    <h5 className="font-medium text-gray-900 mb-3">🔍 Entry-Level UX Contributions:</h5>
+                    <ul className="list-disc list-inside text-gray-700 space-y-2 leading-relaxed">
+                      <li>Created low-fidelity wireframes and prototypes for startup and nonprofit clients</li>
+                      <li>Supported research through user interviews, surveys, and usability documentation</li>
+                      <li>Collaborated in brainstorming sessions to shape product direction and features</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="font-medium text-gray-900 mb-3">🎨 UI & Visual Work:</h5>
+                    <ul className="list-disc list-inside text-gray-700 space-y-2 leading-relaxed">
+                      <li>Built UI assets and interactive prototypes using Sketch and Illustrator</li>
+                      <li>Focused on mobile-first responsive design and visual hierarchy</li>
+                      <li>Developed mini style guides and icon sets for client handoffs</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="font-medium text-gray-900 mb-3">🛠 Tools & Methods:</h5>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        'Sketch',
+                        'Adobe Illustrator',
+                        'Photoshop',
+                        'User Surveys',
+                        'Heuristic Evaluation',
+                        'Wireframing',
+                        'Agile Collaboration'
+                      ].map((tool) => (
                         <span key={tool} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                           {tool}
                         </span>
