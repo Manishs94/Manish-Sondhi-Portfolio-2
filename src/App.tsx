@@ -11,6 +11,7 @@ import { Contact } from './components/Contact';
 import { BankOfAmericaCase } from './pages/BankOfAmericaCase';
 import { CYNCCase } from './pages/CYNCCase';
 import { CyncAdvancedAnalyticsCase } from './pages/CyncAdvancedAnalyticsCase';
+import { UIUXProcessCase } from './pages/UIUXProcessCase';
 import { HuluProject } from './pages/HuluProject';
 import { SplitLandingPage } from './pages/SplitLandingPage';
 import { ExpandingCardsPage } from './pages/ExpandingCardsPage';
@@ -22,6 +23,7 @@ import { BudgetPlanner } from './pages/BudgetPlanner';
 import { VideoGameProject } from './pages/VideoGameProject';
 import { TodoProject } from './pages/TodoProject';
 import { TwitterProject } from './pages/TwitterProject';
+
 
 function App() {
   return (
@@ -47,6 +49,7 @@ function App() {
           <Route path="/case-studies/bank-of-america" element={<BankOfAmericaCase />} />
           <Route path="/case-studies/cync-loan-origination" element={<CYNCCase />} />
           <Route path="/case-studies/cync-advanced-analytics" element={<CyncAdvancedAnalyticsCase/>} />
+          <Route path="/case-studies/uiux-process" element={<UIUXProcessCase />} />
           <Route path="/design/hulu" element={<HuluProject />} />
           <Route path="/design/split" element={<SplitLandingPage />} />
           <Route path="/design/expanding-cards" element={<ExpandingCardsPage />} />

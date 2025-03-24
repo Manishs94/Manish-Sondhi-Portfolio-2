@@ -126,6 +126,35 @@ const caseStudies: CaseStudy[] = [
       'Unified design system',
       'Advanced analytics dashboard'
     ]
+  },
+  {
+    id: 4,
+    title: 'UI/UX Design Process',
+    subtitle: 'End-to-End Design Methodology',
+    description: 'A comprehensive look at the UI/UX design process from research to implementation',
+    image: '/images/uiux-process.jpg',
+    metrics: [
+      { icon: <Users2 className="w-5 h-5" />, value: '40%', label: 'User Engagement' },
+      { icon: <LineChart className="w-5 h-5" />, value: '50%', label: 'Process Efficiency' },
+      { icon: <Clock className="w-5 h-5" />, value: '35%', label: 'Time to Market' },
+      { icon: <Target className="w-5 h-5" />, value: '45%', label: 'Success Rate' }
+    ],
+    tools: ['Figma', 'User Research', 'Prototyping', 'Design Systems'],
+    link: 'https://uiux-case-study-agobpmr.gamma.site/',
+    overview: {
+      challenge: 'Complex design processes leading to inefficient workflows and inconsistent outputs',
+      solution: 'Standardized design methodology with clear frameworks and tooling',
+      impact: 'Improved team efficiency and consistent high-quality deliverables'
+    },
+    team: ['UX Lead', 'UI Designer', 'Research Team'],
+    timeline: '2023',
+    role: 'UX Lead',
+    keyFeatures: [
+      'Research Framework',
+      'Design System',
+      'Process Documentation',
+      'Quality Metrics'
+    ]
   }
 ];
 
@@ -139,6 +168,8 @@ export function CaseStudies() {
       navigate('/case-studies/cync-loan-origination');
     } else if (study.id === 3) {
       navigate('/case-studies/cync-advanced-analytics');
+    } else if (study.id === 4) {
+      navigate('/case-studies/uiux-process');
     }
   };
 
