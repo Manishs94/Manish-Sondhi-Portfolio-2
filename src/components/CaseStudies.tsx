@@ -1,5 +1,8 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowUpRight, LineChart, Clock, Target, Users2 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 interface Metric {
   icon: JSX.Element;
@@ -160,6 +163,28 @@ const caseStudies: CaseStudy[] = [
 
 export function CaseStudies() {
   const navigate = useNavigate();
+  const [selectedStudy, setSelectedStudy] = React.useState<number | null>(null);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
 
   const handleViewCaseStudy = (study: CaseStudy) => {
     if (study.id === 1) {
@@ -174,14 +199,24 @@ export function CaseStudies() {
   };
 
   return (
-    <section id="case-studies" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Featured Case Studies</h2>
+    <section id="case-studies" className="py-20 bg-white dark:bg-gray-900">
+      <motion.div
+        ref={ref}
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="container mx-auto px-6"
+      >
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+          Featured Case Studies
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((study) => (
-            <div 
-              key={study.id} 
-              className="group relative bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            <motion.div
+              key={study.id}
+              variants={itemVariants}
+              className="group relative bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              onClick={() => setSelectedStudy(selectedStudy === study.id ? null : study.id)}
             >
               <div className="aspect-w-16 aspect-h-9 mb-6">
                 <img
@@ -191,23 +226,49 @@ export function CaseStudies() {
                 />
               </div>
               <div className="p-6">
-                <div className="mb-2 text-sm font-medium text-blue-600">
+                <div className="mb-2 text-sm font-medium text-blue-600 dark:text-blue-400">
                   {study.subtitle}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {study.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{study.description}</p>
-                
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{study.description}</p>
+
+                {selectedStudy === study.id && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mb-6 space-y-4"
+                  >
+                    <div>
+                      <h4 className="font-bold text-gray-900 dark:text-white">Challenge</h4>
+                      <p className="text-gray-600 dark:text-gray-300">{study.overview.challenge}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 dark:text-white">Solution</h4>
+                      <p className="text-gray-600 dark:text-gray-300">{study.overview.solution}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 dark:text-white">Impact</h4>
+                      <p className="text-gray-600 dark:text-gray-300">{study.overview.impact}</p>
+                    </div>
+                  </motion.div>
+                )}
+
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   {study.metrics.map((metric, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                    <motion.div
+                      key={index}
+                      whileHover={{ scale: 1.05 }}
+                      className="flex items-center gap-2"
+                    >
                       {metric.icon}
                       <div>
-                        <div className="font-bold text-gray-900">{metric.value}</div>
-                        <div className="text-sm text-gray-600">{metric.label}</div>
+                        <div className="font-bold text-gray-900 dark:text-white">{metric.value}</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-300">{metric.label}</div>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
 
@@ -215,25 +276,27 @@ export function CaseStudies() {
                   {study.tools.map((tool, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-sm"
                     >
                       {tool}
                     </span>
                   ))}
                 </div>
 
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => handleViewCaseStudy(study)}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 >
                   View Case Study
                   <ArrowUpRight className="w-4 h-4 ml-1" />
-                </button>
+                </motion.button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

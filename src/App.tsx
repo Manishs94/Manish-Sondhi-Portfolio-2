@@ -1,10 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { CaseStudies } from './components/CaseStudies';
+import { Portfolio } from './components/Portfolio';
 import { About } from './components/About';
-import { DesignProject } from './components/DesignProject';
-import { DevelopmentProject } from './components/DevelopmentProject';
 import { Skills } from './components/Skills';
 import { Impact } from './components/Impact';
 import { Contact } from './components/Contact';
@@ -24,7 +22,6 @@ import { VideoGameProject } from './pages/VideoGameProject';
 import { TodoProject } from './pages/TodoProject';
 import { TwitterProject } from './pages/TwitterProject';
 
-
 function App() {
   return (
     <Router>
@@ -36,10 +33,8 @@ function App() {
               <>
                 <Header />
                 <Hero />
-                <CaseStudies />
-                <DesignProject />
-                <DevelopmentProject />
-                <About />      {/* Add this line */}
+                <Portfolio />
+                <About />
                 <Skills />
                 <Impact />
                 <Contact />
