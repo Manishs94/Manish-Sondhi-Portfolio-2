@@ -3,13 +3,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { CaseStudies } from './CaseStudies';
 import { DesignProject } from './DesignProject';
-import { DevelopmentProject } from './DevelopmentProject';
 
 const categories = [
   { id: 'all', name: 'All Projects' },
   { id: 'case-study', name: 'Case Studies' },
   { id: 'design', name: 'Design Projects' },
-  { id: 'development', name: 'Development' },
+  // { id: 'development', name: 'Development' },
 ];
 
 export function Portfolio() {
@@ -33,14 +32,14 @@ export function Portfolio() {
         return <CaseStudies />;
       case 'design':
         return <DesignProject />;
-      case 'development':
-        return <DevelopmentProject />;
+      // case 'development':
+      //   return <DevelopmentProject />;
       default:
         return (
           <>
             <CaseStudies />
             <DesignProject />
-            <DevelopmentProject />
+            {/* <DevelopmentProject /> */}
           </>
         );
     }
