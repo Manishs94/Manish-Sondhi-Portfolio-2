@@ -15,22 +15,23 @@ export function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
-    rootMargin: '50px 0px',
+    threshold: 0.05,  // Reduced threshold
+    rootMargin: '100px 0px',  // Increased root margin
   });
 
   const containerVariants = {
     hidden: { 
       opacity: 0,
-      y: 50
+      y: 20  // Reduced initial offset
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: { 
-        duration: 0.6,
+        duration: 0.4,  // Faster duration
         ease: "easeOut",
-        staggerChildren: 0.2 
+        staggerChildren: 0.1,  // Faster stagger
+        when: "beforeChildren"
       },
     },
   };
@@ -71,7 +72,6 @@ export function Portfolio() {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         className="container mx-auto px-4 md:px-6"
-        style={{ opacity: inView ? 1 : 0 }} // Fallback for mobile
       >
         <div className="text-center max-w-2xl mx-auto mb-8 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
