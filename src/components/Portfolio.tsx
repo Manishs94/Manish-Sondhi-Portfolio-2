@@ -55,9 +55,9 @@ export function Portfolio() {
         className="container mx-auto px-6"
       >
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full font-medium mb-4">
+          {/* <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full font-medium mb-4">
             Portfolio
-          </span>
+          </span> */}
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Featured Projects
           </h2>

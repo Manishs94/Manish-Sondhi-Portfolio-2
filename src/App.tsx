@@ -21,6 +21,7 @@ import { BudgetPlanner } from './pages/BudgetPlanner';
 import { VideoGameProject } from './pages/VideoGameProject';
 import { TodoProject } from './pages/TodoProject';
 import { TwitterProject } from './pages/TwitterProject';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
                 <Skills />
                 <Impact />
                 <Contact />
+                <Footer />
               </>
             }
           />

@@ -17,6 +17,7 @@ export function Header() {
             <a href="#portfolio" className="text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
             <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
             <a href="#skills" className="text-gray-600 hover:text-gray-900 transition-colors">Skills</a>
+            <a href="#impact" className="text-gray-600 hover:text-gray-900 transition-colors">Professional Impact</a>
             <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
             <div className="flex items-center space-x-4">
               <a href="https://github.com/Manishs94" target="_blank" rel="noopener noreferrer" 
@@ -50,6 +51,7 @@ export function Header() {
               <a href="#portfolio" className="text-gray-600 hover:text-gray-900 transition-colors">Portfolio</a>
               <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
               <a href="#skills" className="text-gray-600 hover:text-gray-900 transition-colors">Skills</a>
+              <a href="#impact" className="text-gray-600 hover:text-gray-900 transition-colors">Professional Impact</a>
               <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
               <div className="flex items-center space-x-4 pt-2">
                 <a href="https://github.com/Manishs94" target="_blank" rel="noopener noreferrer">
