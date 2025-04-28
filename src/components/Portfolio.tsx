@@ -46,34 +46,31 @@ export function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-white dark:bg-gray-900">
+    <section id="portfolio" className="py-10 md:py-20 bg-white dark:bg-gray-900">
       <motion.div
         ref={ref}
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="container mx-auto px-6"
+        className="container mx-auto px-4 md:px-6"
       >
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          {/* <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full font-medium mb-4">
-            Portfolio
-          </span> */}
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
             Featured Projects
           </h2>
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
             Exploring the intersection of design, technology, and user experience
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
           {categories.map((category) => (
             <motion.button
               key={category.id}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-5 py-2 rounded-full transition-all duration-300 ${
+              className={`px-3 py-1.5 md:px-5 md:py-2 text-sm md:text-base rounded-full transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700'
@@ -85,7 +82,6 @@ export function Portfolio() {
         </div>
 
         {renderSelectedCategory()}
-
       </motion.div>
     </section>
   );
