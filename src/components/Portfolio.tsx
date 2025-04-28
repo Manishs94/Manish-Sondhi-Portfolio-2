@@ -16,14 +16,32 @@ export function Portfolio() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
+    rootMargin: '50px 0px',
   });
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { 
+      opacity: 0,
+      y: 50
+    },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 },
+      y: 0,
+      transition: { 
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.2 
+      },
     },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
   };
 
   const renderSelectedCategory = () => {
@@ -46,13 +64,14 @@ export function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="py-10 md:py-20 bg-white dark:bg-gray-900">
+    <section id="portfolio" className="py-10 md:py-20 bg-white dark:bg-gray-900 min-h-screen">
       <motion.div
         ref={ref}
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         className="container mx-auto px-4 md:px-6"
+        style={{ opacity: inView ? 1 : 0 }} // Fallback for mobile
       >
         <div className="text-center max-w-2xl mx-auto mb-8 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
