@@ -6,22 +6,23 @@ import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Impact } from './components/Impact';
 import { Contact } from './components/Contact';
-import { BankOfAmericaCase } from './pages/BankOfAmericaCase';
-import { CYNCCase } from './pages/CYNCCase';
-import { CyncAdvancedAnalyticsCase } from './pages/CyncAdvancedAnalyticsCase';
-import { UIUXProcessCase } from './pages/UIUXProcessCase';
-import { HuluProject } from './pages/HuluProject';
-import { SplitLandingPage } from './pages/SplitLandingPage';
-import { ExpandingCardsPage } from './pages/ExpandingCardsPage';
-import { RotatingNavPage } from './pages/RotatingNavPage';
-import { ProgressStepsPage } from './pages/ProgressStepsPage';
-import { AnimationsProject } from './pages/AnimationsProject';
-import { KanbanProject } from './pages/KanbanProject';
-import { BudgetPlanner } from './pages/BudgetPlanner';
-import { VideoGameProject } from './pages/VideoGameProject';
-import { TodoProject } from './pages/TodoProject';
-import { TwitterProject } from './pages/TwitterProject';
+import { BankOfAmericaCase } from './Modal/BankOfAmericaCase';
+import { CYNCCase } from './Modal/CYNCCase';
+import { CyncAdvancedAnalyticsCase } from './Modal/CyncAdvancedAnalyticsCase';
+import { UIUXProcessCase } from './Modal/UIUXProcessCase';
+import { HuluProject } from './Modal/HuluProject';
+import { SplitLandingPage } from './Modal/SplitLandingPage';
+import { ExpandingCardsPage } from './Modal/ExpandingCardsPage';
+import { RotatingNavPage } from './Modal/RotatingNavPage';
+import { ProgressStepsPage } from './Modal/ProgressStepsPage';
+import { AnimationsProject } from './Modal/AnimationsProject';
+import { KanbanProject } from './Modal/KanbanProject';
+import { BudgetPlanner } from './Modal/BudgetPlanner';
+import { VideoGameProject } from './Modal/VideoGameProject';
+import { TodoProject } from './Modal/TodoProject';
+import { TwitterProject } from './Modal/TwitterProject';
 import Footer from './components/Footer';
+import Chat from './components/Pages/Chat';
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
           <Route path="/todo" element={<TodoProject />} />
           <Route path="/twitter" element={<TwitterProject />} />
         </Routes>
+        <Chat />
       </div>
     </Router>
   );
