@@ -1,4 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Suspense } from 'react';
+import ErrorBoundary from './components/ui/ErrorBoundary';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import { ScrollToTop } from './components/ui/ScrollToTop';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Portfolio } from './components/Portfolio';
@@ -27,41 +31,46 @@ import Chat from './components/Pages/Chat';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <Hero />
-                <Portfolio />
-                <About />
-                <Skills />
-                <Impact />
-                <Contact />
-                <Footer />
-              </>
-            }
-          />
-          <Route path="/case-studies/bank-of-america" element={<BankOfAmericaCase />} />
-          <Route path="/case-studies/cync-loan-origination" element={<CYNCCase />} />
-          <Route path="/case-studies/cync-advanced-analytics" element={<CyncAdvancedAnalyticsCase/>} />
-          <Route path="/case-studies/uiux-process" element={<UIUXProcessCase />} />
-          <Route path="/design/hulu" element={<HuluProject />} />
-          <Route path="/design/split" element={<SplitLandingPage />} />
-          <Route path="/design/expanding-cards" element={<ExpandingCardsPage />} />
-          <Route path="/design/rotating-nav" element={<RotatingNavPage />} />
-          <Route path="/design/progress-steps" element={<ProgressStepsPage />} />
-          <Route path="/animations" element={<AnimationsProject />} />
-          <Route path="/kanban" element={<KanbanProject />} />
-          <Route path="/recipe" element={<BudgetPlanner />} />
-          <Route path="/video-games" element={<VideoGameProject />} />
-          <Route path="/todo" element={<TodoProject />} />
-          <Route path="/twitter" element={<TwitterProject />} />
-        </Routes>
-        <Chat />
-      </div>
+      <ErrorBoundary>
+        <ScrollToTop />
+        <div className="min-h-screen bg-white">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Header />
+                    <Hero />
+                    <Portfolio />
+                    <About />
+                    <Skills />
+                    <Impact />
+                    <Contact />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route path="/case-studies/bank-of-america" element={<BankOfAmericaCase />} />
+              <Route path="/case-studies/cync-loan-origination" element={<CYNCCase />} />
+              <Route path="/case-studies/cync-advanced-analytics" element={<CyncAdvancedAnalyticsCase/>} />
+              <Route path="/case-studies/uiux-process" element={<UIUXProcessCase />} />
+              <Route path="/design/hulu" element={<HuluProject />} />
+              <Route path="/design/split" element={<SplitLandingPage />} />
+              <Route path="/design/expanding-cards" element={<ExpandingCardsPage />} />
+              <Route path="/design/rotating-nav" element={<RotatingNavPage />} />
+              <Route path="/design/progress-steps" element={<ProgressStepsPage />} />
+              <Route path="/animations" element={<AnimationsProject />} />
+              <Route path="/kanban" element={<KanbanProject />} />
+              <Route path="/recipe" element={<BudgetPlanner />} />
+              <Route path="/video-games" element={<VideoGameProject />} />
+              <Route path="/todo" element={<TodoProject />} />
+              <Route path="/twitter" element={<TwitterProject />} />
+            </Routes>
+            <Chat />
+          </Suspense>
+        </div>
+      </ErrorBoundary>
     </Router>
   );
 }
