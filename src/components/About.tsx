@@ -21,9 +21,12 @@ export function About() {
           {/* Introduction */}
           <div className="container mx-auto px-4 sm:px-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-              Senior UI/UX Designer with 7+ years of experience creating user-centered designs 
-              that drive engagement and enhance usability. Specialized in translating complex 
-              requirements into intuitive digital experiences across web and mobile platforms.
+              I am a Product and UI/UX Designer with 7 years of experience creating user-centered designs 
+              that drive engagement and enhance usability that users love and businesses value.
+              I combine strategic thinking with design execution to deliver results.
+              My approach centers on deeply understanding user needs and business objectives, then crafting solutions that balance both. 
+              I believe in collaborative design processes and data-informed decisions.
+              Specialized in translating complex requirements into intuitive digital experiences across web and mobile platforms.
             </p>
           </div>
 

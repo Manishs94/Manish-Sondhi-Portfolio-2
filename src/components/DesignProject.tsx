@@ -170,7 +170,7 @@ const designProjects: DesignProject[] = [
     category: 'Application Design',
     tools: ['React', 'JavaScript', 'CSS', 'Netlify'],
     link: '/recipe',
-    githubLink: 'https://github.com/yourusername/recipe-book',
+    githubLink: 'https://github.com/Manishs94/Budget-Tracker',
     demoLink: 'https://61f0efec215e813c8ff08265--hardcore-roentgen-8b2667.netlify.app/',
     features: [
       'Budget planner',
@@ -192,7 +192,7 @@ const designProjects: DesignProject[] = [
     category: 'Database Interface Design',
     tools: ['Angular', 'TypeScript', 'Firebase', 'RapidAPI'],
     link: '/video-games',
-    githubLink: 'https://github.com/yourusername/video-game-db',
+    githubLink: 'https://github.com/Manishs94/ng-video-game-db',
     demoLink: 'https://ng-video-game-db.web.app/',
     features: [
       'Game search functionality',
@@ -214,7 +214,7 @@ const designProjects: DesignProject[] = [
     category: 'Productivity Design',
     tools: ['React', 'TypeScript', 'Netlify', 'CSS'],
     link: '/todo',
-    githubLink: 'https://github.com/yourusername/todo-app',
+    githubLink: 'https://github.com/Manishs94/todo-app',
     demoLink: 'https://todo-cda1b8.netlify.app/',
     features: [
       'Task management',
@@ -236,7 +236,7 @@ const designProjects: DesignProject[] = [
     category: 'Social Media Design',
     tools: ['React', 'Firebase', 'Material-UI', 'JavaScript'],
     link: '/twitter',
-    githubLink: 'https://github.com/yourusername/twitter-clone',
+    githubLink: 'https://github.com/Manishs94/Twitter-Clone',
     demoLink: 'https://twitter-clone-83a92.firebaseapp.com/',
     features: [
       'Real-time feed updates',
@@ -252,7 +252,7 @@ const designProjects: DesignProject[] = [
   }
 ];
 
-export function DesignProject() {
+export function DesignProject({ preview = false }) {
   const navigate = useNavigate();
   const [selectedProject, setSelectedProject] = React.useState<number | null>(null);
   const [ref, inView] = useInView({
@@ -277,6 +277,11 @@ export function DesignProject() {
     },
   };
 
+  // Filter projects if in preview mode
+  const displayProjects = preview 
+    ? designProjects.slice(0, 3) 
+    : designProjects;
+
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <motion.div
@@ -286,9 +291,9 @@ export function DesignProject() {
         animate={inView ? "visible" : "hidden"}
         className="container mx-auto px-6"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">Design Portfolio</h2>
+        {!preview && <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">Design Portfolio</h2>}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {designProjects.map((project) => (
+          {displayProjects.map((project) => (
             <motion.div
               key={project.id}
               variants={itemVariants}

@@ -6,10 +6,10 @@ export function Hero() {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            Senior Product & UI/UX Designer
+            Product & UI/UX Designer
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12">
-            Transforming complex challenges into intuitive digital experiences that drive business growth and user satisfaction
+            I design user-centered digital products that solve real problems through research, iteration, and thoughtful UI/UX principles—creating delightful experiences that users love.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
