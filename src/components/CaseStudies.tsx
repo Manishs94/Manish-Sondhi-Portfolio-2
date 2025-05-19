@@ -208,7 +208,7 @@ export function CaseStudies() {
         className="container mx-auto px-6"
       >
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-          Featured Case Studies
+          Case Studies
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((study) => (
