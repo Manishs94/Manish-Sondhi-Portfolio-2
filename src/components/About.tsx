@@ -19,15 +19,42 @@ export function About() {
           <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">About Me</h2>
           
           {/* Introduction */}
-          <div className="container mx-auto px-4 sm:px-6">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              I am a Product and UI/UX Designer with 7 years of experience creating user-centered designs 
-              that drive engagement and enhance usability that users love and businesses value.
-              I combine strategic thinking with design execution to deliver results.
-              My approach centers on deeply understanding user needs and business objectives, then crafting solutions that balance both. 
-              I believe in collaborative design processes and data-informed decisions.
-              Specialized in translating complex requirements into intuitive digital experiences across web and mobile platforms.
-            </p>
+          <div className="container mx-auto px-4 sm:px-6 space-y-6">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                I'm a Product and UI/UX Designer with 7 years of experience designing user-centered digital solutions that not only delight users but also drive measurable business outcomes. My work spans across fintech, SaaS, and enterprise platforms, with a focus on solving real-world problems through thoughtful design, usability, and strategy.
+              </p>
+
+              <p className="text-lg text-gray-700 leading-relaxed">
+                At the core of my design philosophy is a deep understanding of user behavior, stakeholder goals, and technical constraints. I approach every project by aligning product vision with user needs—starting from research and ideation, through wireframes and high-fidelity UI, to developer-ready handoffs and post-launch iteration.
+              </p>
+
+              <div className="mt-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">I specialize in:</h4>
+                <ul className="space-y-4 list-none pl-0">
+                  <li className="flex items-start space-x-3">
+                    <span className="text-blue-600 flex-shrink-0">▹</span>
+                    <span className="text-gray-700">Turning complex workflows into intuitive interfaces—whether it's a loan origination system, an admin dashboard, or a schema-based form builder</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-blue-600 flex-shrink-0">▹</span>
+                    <span className="text-gray-700">Design systems that ensure consistency and scalability across web and mobile platforms</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-blue-600 flex-shrink-0">▹</span>
+                    <span className="text-gray-700">Collaborative design processes, working closely with product managers, developers, and cross-functional teams in Agile environments</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-blue-600 flex-shrink-0">▹</span>
+                    <span className="text-gray-700">Using tools like Figma, Adobe XD, and Protopie, along with platforms like Jira, Confluence, and Miro for smooth end-to-end delivery</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-lg text-gray-700 leading-relaxed mt-6">
+                I believe great design is part empathy, part logic, and part craft. My goal is always to create experiences that are seamless, accessible, and scalable—balancing visual clarity with functional depth.
+              </p>
+            </div>
           </div>
 
           {/* Education */}
