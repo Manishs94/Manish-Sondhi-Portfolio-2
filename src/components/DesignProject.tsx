@@ -255,6 +255,7 @@ const designProjects: DesignProject[] = [
 export function DesignProject({ preview = false }) {
   const navigate = useNavigate();
   const [selectedProject, setSelectedProject] = React.useState<number | null>(null);
+  const [showAll, setShowAll] = React.useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -277,10 +278,12 @@ export function DesignProject({ preview = false }) {
     },
   };
 
-  // Filter projects if in preview mode
+  // Modify the displayProjects logic
   const displayProjects = preview 
     ? designProjects.slice(0, 3) 
-    : designProjects;
+    : showAll 
+      ? designProjects 
+      : designProjects.slice(0, 6);
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -419,6 +422,21 @@ export function DesignProject({ preview = false }) {
             </motion.div>
           ))}
         </div>
+
+        {/* Toggle View More/Less button */}
+        {!preview && designProjects.length > 6 && (
+          <div className="mt-12 text-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setShowAll(!showAll)}
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              {showAll ? 'Show Less' : 'View More Designs'}
+              <ArrowUpRight className={`w-4 h-4 ml-2 transform ${showAll ? 'rotate-180' : ''}`} />
+            </motion.button>
+          </div>
+        )}
       </motion.div>
     </section>
   );
